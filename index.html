@@ -1,7 +1,72 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>tenKinetic</title>
+  <script src="scripts/tk.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="styles/tk.min.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+</head>
 <body>
-<h1>tenKinetic</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1><img src="knerve-header.png" alt="tenKinetic Knerve" title="tenKinetic Knerve" /></h1>
+<div>
+  <p>
+    Knerve is a development server for OS X. It allows you to define sites by simply choosing a directory.
+  </p>
+</div>
+<div>
+  <h2>Features</h2>
+  <ul>
+    <li>Supports PHP (or runs a static server if PHP at least v5.4 is not present)</li>
+    <li>Is ideal for a local WordPress install. Have something like MySQL installed, download WordPress, unzip it and point Knerve at that directory. Then launch the site from Knerve and follow the usual setup.</li>
+    <li>Runs your site at http://directory-name.dev (with special characters replaced with dashes)</li>
+    <li>Also runs your site at https://directory-name.dev (you'll get a warning for the self signed certificate but thats okay for testing on a development machine)</li>
+    <li>Runs in the menubar and stays out of the way</li>
+    <li>Makes no permanent changes to your system. All servers run only while Knerve is running, and configuration changes to enable DNS and routing for the .dev domain are made when starting up and reversed when shutting down.</li>
+  </ul>
+</div>
+<div>
+  <center>
+    <h2>User interface</h2>
+    <img src="knerve-ui.png" alt="Knerve User Interface" title="Knerve User Interface" />
+  </center>
+</div>
+<div>
+  <h2>Requirements</h2>
+  <ul>
+    <li>OS X 10.7 or later</li>
+    <li>(linux version is in the works)</li>
+    <li>(windows version is unlikely)</li>
+    <li>PHP 5.4 or higher for PHP sites</li>
+  </ul>
+</div>
+<div>
+  <h2>Notes</h2>
+  <ul>
+    <li>
+      PHP sites are probably relying on a database server. For WordPress you'd pretty much need to have MySQL installed.
+      If your PHP application supports it and you'd like to use a database that, like Knerve,
+      is only active when it's running then you could try <a href="http://postgressapp.com" title="Postgress.app">Postgres.app</a>
+    </li>
+  </ul>
+</div>
+<div>
+  <h2>Get Knerve</h2>
+  <ul>
+    <li>I'm aproaching the end of testing and refining having used knerve myself for about 4 months</li>
+    <li>I've decided to go with donationware, it's just easier, so you can download it now</li>
+  </ul>
+  <div class="centre">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="QSBN9PBRGZE3J">
+      <input type="hidden" name="cpp_header_image" value="https://tenkinetic.github.io/knerve-header.png">
+      <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+  <div class="centre">
+    <a href="knerve.app.zip" title="Download Knerve" id="download-link">Download</a>
+  </div>
+</div>
 </body>
 </html>
