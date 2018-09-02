@@ -7,12 +7,24 @@
   body {
     font-size: 30px;
   }
+  table {
+    border-collapse: collapse;
+    border: solid 3px grey;
+  }
+  table td, table th {
+    padding: 5px;
+    border: solid 3px grey;
+  }
+  input[type=search] {
+    -webkit-appearance:none;
+    font-size: 30px;
+  }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="dynatable.js"></script>
 </head>
 <body>
-  <table id="jockeys">
+  <table id="jockeys" class="table table-bordered">
     <thead>
       <tr>
         <th>Jockeys</th>
