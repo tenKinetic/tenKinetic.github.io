@@ -16,20 +16,22 @@
 <div>
   <h2>Features</h2>
   <ul>
-    <li>Supports PHP (or runs a static server if PHP at least v5.4 is not present)</li>
+    <li>Supports PHP (or runs a static server if PHP at least v5.4 is not present).</li>
     <li>Is ideal for a local WordPress install. Have something like MySQL installed, download WordPress, unzip it and point Knerve at that directory. Then launch the site from Knerve and follow the usual setup.</li>
-    <li>Runs your site at http://directory-name.dev (with special characters replaced with dashes)</li>
-    <li>Also runs your site at https://directory-name.dev (you'll get a warning for the self signed certificate but thats okay for testing on a development machine)</li>
-    <li>Runs in the menubar and stays out of the way</li>
-    <li>Makes no permanent changes to your system. All servers run only while Knerve is running, and configuration changes to enable DNS and routing for the .dev domain are made when starting up and reversed when shutting down.</li>
-    <li>If you are getting excessive requests to provide your password for system updates you are probably using macOS Sierra which enables TTY Tickets by default. With this enabled you must enter your password every time it's required. You can either disable TTY Tickets (which can be done per user) or keep on typing.</li>
+    <li>Runs your site at http://directory-name.knerve (with special characters replaced with dashes).</li>
+    <li>Also runs your site at https://directory-name.knerve (you'll get a warning for the self signed certificate but thats okay for testing on a development machine).</li>
+    <li>Runs in the menubar and stays out of the way.</li>
+    <li>Makes no permanent changes to your system. All servers run only while Knerve is running, and configuration changes to enable DNS and routing for the .knerve domain are made when starting up and reversed when shutting down.</li>
+    <li>http(s)://xip.knerve will list links to all sites in xip format for testing from other network devices.</li>
+    <li>
+      The settings file has some features that can be enabled by manually editing that file:
+      <ul>
+        <li>MySQL has three commands to get status, start and stop the mysql server. These can be edited if they don't match your setup.</li>
+        <li>Each site can respond to additional hosts. Mostly useful for specifying a site that should respond to localhost or 127.0.0.1, also with the corresponding setup to forward domain.com to 127.0.0.1 a knerve site can respond to domain.com using this feature.</li>
+      </ul>
+      These will hopefully be integrated into the UI soon.
+    </li>
   </ul>
-</div>
-<div>
-  <center>
-    <h2>User interface</h2>
-    <img src="knerve-ui.png" alt="Knerve User Interface" title="Knerve User Interface" />
-  </center>
 </div>
 <div>
   <h2>Requirements</h2>
