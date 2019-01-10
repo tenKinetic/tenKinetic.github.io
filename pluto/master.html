@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+  html, body {
+    background-color: black;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    font: 22px Verdana, sans-serif;
+  }
+  video {
+    margin: 6vh 0;
+    height: 86vh;
+    max-width: 96vw;
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 10px;
+    background-color: yellow;
+    font: 22px Verdana, sans-serif;
+    text-transform: uppercase;
+    display: none;
+    border-radius: 75px;
+    height: 150px;
+    width: 150px;
+    border: none;
+  }
+  </style>
+</head>
+<body>
+  <video preload="auto" autoplay muted>
+    <source src="Test.m4v" type="video/mp4">
+  </video>
+  <button>Play again</button>
+  <script>
+  var video = document.querySelector('video')
+  var replayButton = document.querySelector('button')
+  video.addEventListener('ended', videoEnded)
+  replayButton.addEventListener('click', hideReplayButton)
+  function videoEnded(e) {
+    document.querySelector('button').style.display = 'block'
+  }
+  function hideReplayButton(e) {
+    replayButton.style.display = 'none'
+    video.play()
+  }
+  </script>
+</body>
+</html>
