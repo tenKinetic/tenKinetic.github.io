@@ -1,80 +1,232 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <!--baseURL-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>tenKinetic</title>
-  <script src="scripts/tk.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="styles/tk.min.css" media="screen" title="no title" charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <meta name="description" content="Albury based freelance software developer" />
+  <meta name="keywords" content="software, websites, desktop, mobile, macos, windows, linux, audio, production" />
+
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  <script src="/assets/js/tenkinetic.js"></script>
+
+
+  <link href="/assets/css/vendor/slides/css/slides.min.css" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Roboto:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css">
+
+
+  <style>
+    html,
+    body {
+      background-color: black
+    }
+
+    audio {
+      display: none
+    }
+  </style>
 </head>
+
 <body>
-<h1><img src="knerve-header.png" alt="tenKinetic Knerve" title="tenKinetic Knerve" /></h1>
-<div>
-  <p>
-    Knerve is a development server for OS X. It allows you to define sites by simply choosing a directory.
-  </p>
-</div>
-<div>
-  <h2>Features</h2>
-  <ul>
-    <li>Supports PHP (or runs a static server if PHP at least v5.4 is not present).</li>
-    <li>Is ideal for a local WordPress install. Have something like MySQL installed, download WordPress, unzip it and point Knerve at that directory. Then launch the site from Knerve and follow the usual setup.</li>
-    <li>Runs your site at http://directory-name.knerve (with special characters replaced with dashes).</li>
-    <li>Also runs your site at https://directory-name.knerve (you'll get a warning for the self signed certificate but thats okay for testing on a development machine).</li>
-    <li>Runs in the menubar and stays out of the way.</li>
-    <li>Makes no permanent changes to your system. All servers run only while Knerve is running, and configuration changes to enable DNS and routing for the .knerve domain are made when starting up and reversed when shutting down.</li>
-    <li>http(s)://xip.knerve will list links to all sites in xip format for testing from other network devices.</li>
-    <li>
-      The settings file has some features that can be enabled by manually editing that file:
-      <ul>
-        <li>MySQL has three commands to get status, start and stop the mysql server. These can be edited if they don't match your setup.</li>
-        <li>Each site can respond to additional hosts. Mostly useful for specifying a site that should respond to localhost or 127.0.0.1, also with the corresponding setup to forward domain.com to 127.0.0.1 a knerve site can respond to domain.com using this feature.</li>
-      </ul>
-      These will hopefully be integrated into the UI soon.
-    </li>
-  </ul>
-</div>
-<div>
-  <h2>Requirements</h2>
-  <ul>
-    <li>OS X 10.7 or later</li>
-    <li>(linux version is in the works)</li>
-    <li>(windows version is unlikely)</li>
-    <li>PHP 5.4 or higher for PHP sites</li>
-  </ul>
-</div>
-<div>
-  <h2>Notes</h2>
-  <ul>
-    <li>
-      PHP sites are probably relying on a database server. For WordPress you'd pretty much need to have MySQL installed.
-      If your PHP application supports it and you'd like to use a database that, like Knerve,
-      is only active when it's running then you could try <a href="http://postgressapp.com" title="Postgress.app" target="_blank">Postgres.app</a>
-    </li>
-    <li>
-      Knerve's detection of and ability to start and stop the database currently rely on MariaDB being installed at /usr/local/mysql/.
-      The settings file contains the start and stop commands for MySQL which can be edited to suit other configurations.
-    </li>
-  </ul>
-</div>
-<div>
-  <h2>Get Knerve</h2>
-  <ul>
-    <li>I'm been using Knerve for a few months instead of Apache without a hitch so it's time to make it public.</li>
-    <li>I've decided to go with donationware, it's just easier, so you can download it now.</li>
-    <li>Feedback and issues can be submitted through the github site.</li>
-  </ul>
-  <div class="centre">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="QSBN9PBRGZE3J">
-      <input type="hidden" name="cpp_header_image" value="https://tenkinetic.github.io/knerve-header.png">
-      <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-    </form>
-  </div>
-  <div class="centre">
-    <a href="https://github.com/tenKinetic/Knerve" title="Download Knerve" id="download-link">Download</a>
-  </div>
-</div>
+
+  <div id="page" class="page slides" style="">
+    <section class="slide fade-6 kenBurns">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+
+            <ul class="grid">
+              <li class="col-12-12" data-container="true">
+                <div data-component="image">
+                  <img src="images/uploads/1/5dc1f18f64794_tenKinetic.png?0.7294181369532147" class="">
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background-image:url(/assets/css/vendor/slides/assets/img/background/img-01.jpg)"></div>
+    </section>
+    <section class="slide fade-6 kenBurns">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+
+            <div class="fix-9-12">
+              <div data-component="heading" data-content="true" class="component-retain">
+                <h1 class="ae-1">Freelance software developer</h1>
+              </div>
+              <div data-component="text" data-content="true" class="component-retain">
+                <p class="ae-2">Based in Albury, NSW, Australia.<br>I work remotely on a whole host of projects. In recent years I've done websites, mobile apps, desktop apps, REST interfaces, SAP integrations, production process consulting, DevOps
+                  support among many other projects of a similar nature.</p>
+              </div>
+              <div data-component="button" data-content="false" class="component-retain"><a class="button blue gradient ae-5 fromCenter" onclick="window.changeSlide('increase')">Next</a></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background-image:url(/images/uploads/1/5df40e224128f_clouds-cold-frost-frosty-540518.jpg)"></div>
+    </section>
+    <section class="slide fade-6 kenBurns fromLeft">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+
+            <div class="col-6-12">
+              <div class="fix-6-12 toLeft">
+                <audio src="/assets/au/i-dont-want-you-there.mp3" controls=""></audio>
+              </div>
+            </div>
+            <div class="fix-6-12 left toRight">
+              <div data-component="heading" data-content="true" class="component-retain">
+                <h1 class="ae-1">Also a musician</h1>
+              </div>
+              <div data-component="text" data-content="true" class="component-retain">
+                <p class="ae-2">So I've also done sound editing and production for podcasts including composing backing tracks.<br>Not to mention hundreds of songs only to have been heard by me.</p>
+              </div>
+              <div data-component="button" data-content="false" class="component-retain"><a id="show-audio" class="button blue gradient crop ae-3">I'm game</a><a class="button blue gradient ae-5 fromCenter"
+                  onclick="window.changeSlide('increase')">Next</a></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background-image:url(/assets/css/vendor/slides/assets/img/background/img-15.jpg)"></div>
+    </section>
+    <section class="slide fade-6 kenBurns">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+
+            <div class="fix-12-12">
+              <ul class="flex reverse">
+                <li class="col-6-12 left">
+                  <div data-component="heading" data-content="true" class="component-retain">
+                    <h1 class="ae-1 fromLeft">Projects</h1>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="ae-2 fromLeft">Almost all of the projects I do for clients are confidential, although some may appear here at some point.</p>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="ae-2 fromLeft">I also have a few personal projects located on <a href="https://github.com/tenKinetic" rel="noopener noreferrer" target="_blank"><u>github</u></a>.</p>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="ae-2 fromLeft">Aside from a lot of experiments, there is one project that is on its way to becoming ready for general use. Knerve is a very lightweight web server that serves static and PHP based websites.</p>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="ae-2 fromLeft">Another less niche project is Knaught. Not yet public in any form (the project in github is the boilerplate upon which it's built) it's to be a time tracking system to replace the one I currently use which
+                      will not be getting a 64bit upgrade. As such, I'm building my own with just the features I use so I can move on to Catalina.</p>
+                  </div>
+                  <div data-component="button" data-content="false" class="component-retain"><a class="button blue gradient ae-5 fromCenter" onclick="window.changeSlide('increase')">Next</a></div>
+                </li>
+                <li class="col-6-12 cell-16">
+                  <!--<ul class="grid">-->
+                  <!--  <li class="col-11-12 toRight">-->
+                  <!--    <div class="videoThumbnail rounded shadow ae-4 fromCenter popupTrigger" data-popup-id="16">-->
+                  <!--      <img class="wide" src="/assets/css/vendor/slides/assets/img/video-16.jpg" alt="Video Thumbnail" data-selector="img">-->
+                  <!--    </div>-->
+                  <!--  </li>-->
+                  <!--</ul>-->
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="background" style="background-image: url(/images/uploads/4/5df413eec4050_photo-of-dried-lava-983200.jpg);"></div>
+    </section>
+
+    <!-- Popup Video -->
+    <div class="popup autoplay" data-popup-id="16">
+      <div class="close"><svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/sprite.svg#close"></use>
+        </svg></div>
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+            <div class="fix-10-12">
+              <div class="embedVideo popupContent">
+                <iframe src="https://www.youtube.com/embed/g8yBqxTiHSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="slide fade-6 kenBurns">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+
+            <div class="fix-12-12">
+
+              <div class="fix-6-12 toLeft left">
+                <div data-component="heading" data-content="true" class="component-retain">
+                  <h1 class="ae-1">Contact</h1>
+                </div>
+                <div data-component="text" data-content="true" class="component-retain">
+                  <p class="ae-2 light margin-bottom-1 toLeft">The best way to get in touch is <a href="mailto:tenkinetic@gmail.com"><u>tenkinetic@gmail.com</u></a>.</p>
+                </div>
+              </div>
+
+              <ul class="grid margin-top-4">
+                <li class="col-4-12 left ae-3">
+                  <div data-component="heading" data-content="true" class="component-retain">
+                    <h3 class="">Slides</h3>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="tiny opacity-6">This site uses the <a href="https://designmodo.com/slides/" rel="noopener noreferrer" target="_blank"><u>slides framework</u></a> which I use for most of my website projects.</p>
+                  </div>
+                </li>
+                <li class="col-4-12 left ae-4">
+                  <div data-component="heading" data-content="true" class="component-retain">
+                    <h3 class="">Pexels</h3>
+                  </div>
+                  <div data-component="text" data-content="true" class="component-retain">
+                    <p class="tiny opacity-6">The slides backgrounds are sourced from <u>Pexels</u></p>
+                  </div>
+                </li>
+                <li class="col-4-12 left ae-5">
+                  <!--<div data-component="heading" data-content="true" draggable="true" class="component-retain"><h3 data-selector="*[data-component=&quot;heading&quot;] > *">Listen Your Mind</h3></div>-->
+                  <!--<div data-component="text" data-content="true" draggable="true" class="component-retain"><p class="tiny opacity-6" data-selector="*[data-component=&quot;text&quot;] > *">The details are the very source of expression in architecture.</p></div>-->
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background-image: url(/images/uploads/4/5df43383c77ce_high-rise-buildings-during-nighttime-1366957.jpg);"></div>
+    </section>
+  </div><!-- /#page -->
+
+  <input type="hidden" id="siteCode" value="au">
+  <!--[if lte IE 11]><!-->
+  <script defer="" type="text/javascript" src="/assets/js/vendor/polyfills/Array.from.js"></script>
+  <script defer="" type="text/javascript" src="/assets/js/vendor/polyfills/Promise.js"></script>
+  <script defer="" type="text/javascript" src="/assets/js/vendor/polyfills/fetch.umd.js"></script>
+  <script defer="" type="text/javascript" src="/assets/js/vendor/polyfills/closest.min.js"></script>
+  <script defer="" type="text/javascript" src="/assets/js/vendor/polyfills/classList.js"></script>
+  <!--<![endif]-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/slides/slides.min.js"></script>
+
+
+
+
 </body>
+
 </html>
