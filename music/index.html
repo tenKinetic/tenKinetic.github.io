@@ -54,6 +54,7 @@
     </div>
     <script>
       const audioPlayer = document.querySelector("audio");
+      let currentTrack = 0;
       const tracks = [
         "/assets/au/taxidermy-hotel/1-down.mp3",
         "/assets/au/taxidermy-hotel/2-boom.mp3",
@@ -68,11 +69,10 @@
       document.addEventListener(
         "DOMContentLoaded",
         () => {
-          let currentVideo = 0;
           const nextVideo = () => {
-            if (currentVideo === 15) currentVideo = 0;
-            else ++currentVideo;
-            return tracks[currentVideo];
+            if (currentTrack === 15) currentTrack = 0;
+            else ++currentTrack;
+            return tracks[currentTrack];
           };
 
           audioPlayer.onended = function () {
@@ -86,6 +86,7 @@
       );
 
       const play = (tracknumber) => {
+        currentTrack = tracknumber;
         audioPlayer.src = tracks[tracknumber];
         audioPlayer.play();
       };
