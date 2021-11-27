@@ -69,6 +69,7 @@ function init() {
 }
 
 function mouseMove ( event ){
+  event.preventDefault(); 
   mouse.x = event.pageX;
   mouse.y = event.pageY;
   draw();
