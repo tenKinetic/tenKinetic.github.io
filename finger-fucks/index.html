@@ -39,7 +39,7 @@ var position = {x: 0, y: window.innerHeight/2};
 var counter = 0;
 var minFontSize = 3;
 var angleDistortion = 0;
-var letters = "fucking cunt shit wank bitch slut piss arse wank bollocks dick bastard shitting bugger arse twat cunting hell of a bitch shit tossface arseholing crap";
+var letters = "fucking cunt shit wank bitch slut piss arse wank bollocks dick bastard shitting bugger arse twat cunting hell of a bitch shit tossface arseholing crap ";
 
 // Drawing variables
 var canvas;
@@ -57,6 +57,10 @@ function init() {
   canvas.addEventListener('mouseup',   mouseUp,   false);
   canvas.addEventListener('mouseout',  mouseUp,  false);  
   canvas.addEventListener('dblclick', doubleClick, false);
+
+  canvas.addEventListener('touchstart', mouseDown, false);
+  canvas.addEventListener('touchend', mouseUp, false);
+  canvas.addEventListener('touchmove', mouseMove, false);
   
   window.onresize = function(event) {
     canvas.width = window.innerWidth;
